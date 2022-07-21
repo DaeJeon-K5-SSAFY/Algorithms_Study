@@ -23,7 +23,7 @@ public class Main {
 				}
 			}
 		}
-				
+		
 		int count = 0;
 		
 		int[][] moves = {{-1,0},{1,0},{0,-1},{0,1}};
