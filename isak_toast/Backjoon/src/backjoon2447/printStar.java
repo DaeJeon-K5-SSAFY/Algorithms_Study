@@ -10,7 +10,7 @@ package backjoon2447;
 import java.util.*;
 import java.io.*;
 
-public class printStar {
+public class PrintStar {
 	 public static void main(String args[]) throws Exception {
 //       BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("input.txt")));
 	   BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
