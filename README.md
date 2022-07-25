@@ -22,5 +22,5 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1회차(7/19 ~ 7/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|⭕|⭕|⭕|
 |1회차(7/19 ~ 7/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|🔺|🔺|🔺|
-|2회차(7/21 ~ 7/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|
-|2회차(7/21 ~ 7/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|
+|2회차(7/21 ~ 7/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|🔺|?|⭕|
+|2회차(7/21 ~ 7/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|🔺|?|⭕|
