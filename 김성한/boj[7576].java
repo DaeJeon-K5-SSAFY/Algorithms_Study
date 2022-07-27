@@ -55,7 +55,6 @@ public class Main {
 			if(count != order) {
 				count += 1;
 			}
-			
 		}
 		
 		if(checker(board, N, M)) {
