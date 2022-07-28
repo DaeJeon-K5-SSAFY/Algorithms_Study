@@ -15,9 +15,6 @@ public class Main {
 		
 		int count1 = 0;
 		int count2 = 0;
-		
-		
-
 
 		for(int i = 0; i < N; i++) {
 			for(int j = 0; j < N; j++) {
@@ -53,7 +50,7 @@ public class Main {
 		}
 	}
 
-	public static void dfs2(String[][] tempBoard, String color, int x, int y, int N) {
+	public static void dfs2(String[][] tempBoard, String color, int x, int y, int N) { //적록색약이 있는 사람용 깊이우선 탐색
 		if(x < 0 || x >= N || y < 0 || y >= N) {
 			return;
 		}
