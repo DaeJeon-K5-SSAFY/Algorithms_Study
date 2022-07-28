@@ -7,7 +7,7 @@
 ## 규칙 📚
 
 - 일정 : 주 2회 진행 (매주 월요일, 목요일)
-- 문제 : 각 기간별 두 문제
+- 문제 : 주간 두 문제
 - 파일명 : boj[문제번호].java
 - <b>Commit Message</b> : [add] boj[문제번호] 풀이
 
@@ -27,3 +27,4 @@
 |3회차(7/25 ~ 7/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|🔺|
 |3회차(7/25 ~ 7/28)|적록색약|GOLD 5|[링크](https://www.acmicpc.net/problem/10026)|⭕|⭕|⭕|
 |4회차(7/28 ~ 8/01)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|...|...|...|
+|4회차(7/28 ~ 8/01)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|...|...|...|
