@@ -14,7 +14,7 @@
 <br />
 
 ## 스터디 진행 순서 🎤
-1. 기존 스터디 숙제 확인
+1. 기존 스터디 숙제 확인 및 `코드 리뷰`
 2. 진행 상황 공유 및 일정 확인
 3. 일정 수정 및 계획 고찰
 4. 마지막 소감 및 의견
@@ -27,14 +27,16 @@
 
 |주차|문제|난이도|링크|김이삭|이진섭|김성한|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|1회차(7/19 ~ 7/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|⭕|⭕|⭕|
-|1회차(7/19 ~ 7/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|⭕|🔺|🔺|
-|2회차(7/21 ~ 7/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|⭕|⭕|⭕|
-|2회차(7/21 ~ 7/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|⭕|⭕|⭕|
-|3회차(7/25 ~ 7/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|🔺|
-|3회차(7/25 ~ 7/28)|적록색약|GOLD 5|[링크](https://www.acmicpc.net/problem/10026)|⭕|⭕|⭕|
-|4회차(7/28 ~ 8/04)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|⭕|🔺|⭕|
-|4회차(7/28 ~ 8/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|⭕|🔺|
+|1회차(07/19 ~ 07/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|⭕|⭕|⭕|
+|1회차(07/19 ~ 07/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|⭕|🔺|🔺|
+|2회차(07/21 ~ 07/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|⭕|⭕|⭕|
+|2회차(07/21 ~ 07/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|⭕|⭕|⭕|
+|3회차(07/25 ~ 07/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|🔺|
+|3회차(07/25 ~ 07/28)|적록색약|GOLD 5|[링크](https://www.acmicpc.net/problem/10026)|⭕|⭕|⭕|
+|4회차(07/28 ~ 08/04)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|⭕|🔺|⭕|
+|4회차(07/28 ~ 08/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|⭕|🔺|
+|5회차(08/04 ~ 08/11)||GOLD 5|[링크](https://www.acmicpc.net/problem/)|...|...|...|
+|5회차(08/04 ~ 08/11)||GOLD 5|[링크](https://www.acmicpc.net/problem/)|...|...|...|
 
 <br />
 
