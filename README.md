@@ -45,7 +45,7 @@
 |주제|링크|
 |:--:|:--:|
 |순열과 조합|[N과 M 시리즈](https://www.acmicpc.net/workbook/view/2052)|
-
+|월말평가 대비|[삼성 A형 기출 문제](https://www.acmicpc.net/workbook/view/2771)|
 <br />
 
 ## 교재 진도 관리 📖
