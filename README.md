@@ -46,6 +46,17 @@
 |:--:|:--:|
 |순열과 조합|[N과 M 시리즈](https://www.acmicpc.net/workbook/view/2052)|
 |월말평가 대비|[삼성 A형 기출 문제](https://www.acmicpc.net/workbook/view/2771)|
+
+<br />
+
+## 취업 관련 링크 모음 🔥
+
+|주제|링크|
+|:--:|:--:|
+|CS 면접 대비1|[CS 면접 대비1](https://github.com/WeareSoft/tech-interview)|
+|CS 면접 대비2|[CS 면접 대비2](https://github.com/brave-people/brave-tech-interview)|
+|CS 면접 대비3|[CS 면접 대비3](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)|
+
 <br />
 
 ## 교재 진도 관리 📖
