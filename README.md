@@ -27,15 +27,15 @@
 
 |주차|문제|난이도|링크|김이삭|이진섭|김성한|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|1회차(07/19 ~ 07/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|🔺|⭕|⭕|
-|1회차(07/19 ~ 07/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|🔺|🔺|🔺|
+|1회차(07/19 ~ 07/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|⭕|⭕|⭕|
+|1회차(07/19 ~ 07/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|⭕|🔺|🔺|
 |2회차(07/21 ~ 07/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|🔺|⭕|⭕|
 |2회차(07/21 ~ 07/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|🔺|⭕|⭕|
 |3회차(07/25 ~ 07/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|🔺|
 |3회차(07/25 ~ 07/28)|적록색약|GOLD 5|[링크](https://www.acmicpc.net/problem/10026)|⭕|⭕|⭕|
-|4회차(07/28 ~ 08/04)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|🔺|🔺|⭕|
+|4회차(07/28 ~ 08/04)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|⭕|🔺|⭕|
 |4회차(07/28 ~ 08/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|🔺|🔺|
-|5회차(08/04 ~ 08/11)|치킨 배달|GOLD 5|[링크](https://www.acmicpc.net/problem/15686)|🔺|🔺|⭕|
+|5회차(08/04 ~ 08/11)|치킨 배달|GOLD 5|[링크](https://www.acmicpc.net/problem/15686)|⭕|🔺|⭕|
 |5회차(08/04 ~ 08/11)|동전 1|GOLD 5|[링크](https://www.acmicpc.net/problem/2293)|🔺|⭕|⭕|
 |6회차(08/11 ~ 08/18)|로봇 청소기|GOLD 5|[링크](https://www.acmicpc.net/problem/14503)|...|...|...|
 |6회차(08/11 ~ 08/18)|AC|GOLD 5|[링크](https://www.acmicpc.net/problem/5430)|...|...|...|
