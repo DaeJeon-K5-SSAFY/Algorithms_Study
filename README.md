@@ -28,7 +28,7 @@
 |주차|문제|난이도|링크|김이삭|이진섭|김성한|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |1회차(07/19 ~ 07/21)|토마토|GOLD 5|[링크](https://www.acmicpc.net/problem/7576)|⭕|⭕|⭕|
-|1회차(07/19 ~ 07/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|⭕|🔺|🔺|
+|1회차(07/19 ~ 07/21)|별찍기|GOLD 5|[링크](https://www.acmicpc.net/problem/2447)|⭕|🔺|⭕|
 |2회차(07/21 ~ 07/25)|Fly me to the Alpha Centauri|GOLD 5|[링크](https://www.acmicpc.net/problem/1011)|🔺|⭕|⭕|
 |2회차(07/21 ~ 07/25)|평범한 배낭|GOLD 5|[링크](https://www.acmicpc.net/problem/12865)|🔺|⭕|⭕|
 |3회차(07/25 ~ 07/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|⭕|
