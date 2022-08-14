@@ -34,7 +34,7 @@
 |3회차(07/25 ~ 07/28)|LCS|GOLD 5|[링크](https://www.acmicpc.net/problem/9251)|🔺|🔺|🔺|
 |3회차(07/25 ~ 07/28)|적록색약|GOLD 5|[링크](https://www.acmicpc.net/problem/10026)|⭕|⭕|⭕|
 |4회차(07/28 ~ 08/04)|토마토(anotherVersion)|GOLD 5|[링크](https://www.acmicpc.net/problem/7569)|⭕|🔺|⭕|
-|4회차(07/28 ~ 08/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|🔺|🔺|
+|4회차(07/28 ~ 08/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|🔺|⭕|
 |5회차(08/04 ~ 08/11)|치킨 배달|GOLD 5|[링크](https://www.acmicpc.net/problem/15686)|⭕|🔺|⭕|
 |5회차(08/04 ~ 08/11)|동전 1|GOLD 5|[링크](https://www.acmicpc.net/problem/2293)|🔺|⭕|⭕|
 |6회차(08/11 ~ 08/18)|로봇 청소기|GOLD 5|[링크](https://www.acmicpc.net/problem/14503)|...|...|...|
