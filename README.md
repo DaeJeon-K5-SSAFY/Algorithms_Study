@@ -37,10 +37,10 @@
 |4회차(07/28 ~ 08/04)|암호 만들기|GOLD 5|[링크](https://www.acmicpc.net/problem/1759)|🔺|🔺|⭕|
 |5회차(08/04 ~ 08/11)|치킨 배달|GOLD 5|[링크](https://www.acmicpc.net/problem/15686)|⭕|🔺|⭕|
 |5회차(08/04 ~ 08/11)|동전 1|GOLD 5|[링크](https://www.acmicpc.net/problem/2293)|⭕|⭕|⭕|
-|6회차(08/11 ~ 08/18)|로봇 청소기|GOLD 5|[링크](https://www.acmicpc.net/problem/14503)|⭕|...|⭕|
-|6회차(08/11 ~ 08/18)|AC|GOLD 5|[링크](https://www.acmicpc.net/problem/5430)|🔺|...|⭕|
-|7회차(08/18 ~ 08/25)|AC|GOLD 5|[링크](https://www.acmicpc.net/problem/1107)|...|...|...|
-|7회차(08/18 ~ 08/25)|AC|GOLD 5|[링크](https://www.acmicpc.net/problem/1916)|...|...|...|
+|6회차(08/11 ~ 08/18)|로봇 청소기|GOLD 5|[링크](https://www.acmicpc.net/problem/14503)|⭕|🔺|⭕|
+|6회차(08/11 ~ 08/18)|AC|GOLD 5|[링크](https://www.acmicpc.net/problem/5430)|🔺|🔺|⭕|
+|7회차(08/18 ~ 08/25)|리모콘|GOLD 5|[링크](https://www.acmicpc.net/problem/1107)|...|...|...|
+|7회차(08/18 ~ 08/25)|최소비용 구하기|GOLD 5|[링크](https://www.acmicpc.net/problem/1916)|...|...|...|
 
 <br />
 
