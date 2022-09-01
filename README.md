@@ -42,7 +42,7 @@
 |7회차(08/18 ~ 08/25)|리모콘|GOLD 5|[링크](https://www.acmicpc.net/problem/1107)|⭕|🔺|⭕|
 |7회차(08/18 ~ 08/25)|최소비용 구하기|GOLD 5|[링크](https://www.acmicpc.net/problem/1916)|⭕|🔺|⭕|
 |8회차(08/25 ~ 09/01)|공유기 설치|GOLD 4|[링크](https://www.acmicpc.net/problem/2110)|🔺|🔺|🔺|
-|8회차(08/25 ~ 09/01)|동전 2|GOLD 5|[링크](https://www.acmicpc.net/problem/2294)|⭕|🔺|🔺|
+|8회차(08/25 ~ 09/01)|동전 2|GOLD 5|[링크](https://www.acmicpc.net/problem/2294)|⭕|⭕|🔺|
 |9회차(09/01 ~ 09/08)|합분해|GOLD 5|[링크](https://www.acmicpc.net/problem/2225)|...|...|...|
 |9회차(09/01 ~ 09/08)|톱니바퀴|GOLD 5|[링크](https://www.acmicpc.net/problem/14891)|...|...|...|
 
