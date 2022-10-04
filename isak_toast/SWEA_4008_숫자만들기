@@ -1,0 +1,255 @@
+## SWEA_4008_숫자만들기
+
+---
+
+<br />
+
+### 코드
+
+```java
+package com.ssafy.problem3;
+
+import java.util.Arrays;
+
+public class SWEA_4008_숫자만들기_순열테스트 {
+	// 숫자 5개 => 3개 순열로 따지는 경우의 수
+	static int[] src = {1,2,3,4,5};
+	static int[] tgt = new int[3];
+	static boolean[] select = new boolean[src.length];
+	
+	public static void main(String[] args) {
+		
+		perm(0);
+	}
+
+	private static void perm(int tgtIdx) {
+		// 매번 모든 src의 경우의 수를 따진다. <- srcIdx는 필요
+		// 대신 중복 선택 X <- select 활용
+		
+		// 기저조건
+		if(tgtIdx == tgt.length) {
+			System.out.println(Arrays.toString(tgt));
+			return;
+		}
+		
+		// 모든 src 대해 고려
+		for (int i = 0; i < src.length; i++) {
+			// 이미 선택된 경우는 skip
+			if( select[i] ) continue;
+			
+			tgt[tgtIdx] = src[i];
+			select[i] = true;
+			perm(tgtIdx + 1);
+			select[i] = false; 
+		}
+	}
+}
+```
+
+<br />
+
+
+### 결과 : 시간초과
+
+- 메모리 : KB
+- 실행시간 : ms
+- 코드길이 : B
+
+<br />
+
+### 풀이 방법
+출력
+연산자 카드를 사용하여 만들 수 있는 수식으로 얻은 결과값 중 최댓값과 최솟값의 차이이다.
+
+제약사항
+연산자 카드의 개수의 총 합은 항상 N-1
+값은 -1억 ~ 1억 사이값을 보장
+수식을 계산할 때 연산자의 우선 순위는 고려하지 않고 왼쪽에서 오른쪽으로 차례대로 계산
+
+특징
+카드 순서를 가지는 경우의 수가 발생 -> 순열
+연산자의 우선 순위를 고려하지 않고 왼쪽에서 오른쪽으로 차례대로 계산
+최대, 최소를 찾아서 두 값의 차이를 출력
+
+
+> 순열을 통해서 값을 계산해서 진행
+> DFS를 통해서 값을 누적하면서 진행 (연산자가 왼쪽에서 오른쪽으로 차례대로 계산하기 때문에 가능)
+
+
+> 순열을 사용한 경우에는 시간 초과 발생, nPr -> 팩토리얼만큼 순열의 경우의 수가 존재하기 때문에 선택지가 늘어나면 연산량은 !(팩토리얼)적으로 상승한다.
+> 순열로 풀게 되면 시간 초과가 난다.
+
+<br />
+
+<!--추가 내용 있다면 더 적어주시면 됩니다-->
+---
+
+
+version2
+DFS로 고를 수 있는 카드 수를 보고 각 과정에서 연산 후 마지막에는 결과값을 갱신
+```java
+package com.ssafy.problem3;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+public class SWEA_4008_숫자만들기_DFS {
+	static int T, N, max, min;
+	static int[] num;
+
+	public static void main(String[] args) throws IOException {
+		System.setIn(new FileInputStream("data3/4008.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		T = Integer.parseInt(br.readLine());
+
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine());
+			num = new int[N];
+
+			// 입력
+			StringTokenizer stk = new StringTokenizer(br.readLine());
+			int add = Integer.parseInt(stk.nextToken());
+			int sub = Integer.parseInt(stk.nextToken());
+			int mul = Integer.parseInt(stk.nextToken());
+			int div = Integer.parseInt(stk.nextToken());
+
+			// 숫자 배열
+			stk = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				num[i] = Integer.parseInt(stk.nextToken());
+			}
+
+			// 초기화
+			max = Integer.MIN_VALUE;
+			min = Integer.MAX_VALUE;
+
+			// dfs
+			dfs(num[0], 1, add, sub, mul, div);
+			System.out.println("#" + t + " " + (max - min));
+		}
+	}
+	// result : 이전 단계의 계산 결과, 현재 dfs 입장에서 보면 연산자 앞 수
+	// cnt : 기저조건을 확인하기 위한 재귀호출 count, 연산자 뒷 수에 대한 index
+	// add, sub, mul, div : 각 연산의 수정 가능 횟수 (현재 dfs에 주어진 연산자의 수), 사용하면 하나 줄여서 다음 단계로
+	private static void dfs(int result, int cnt, int add, int sub, int mul, int div) {
+		if(cnt == N) {
+			// result가 이미 계산된 결과
+			max = Math.max(max, result);
+			min = Math.min(min, result);
+			return;
+		}
+
+		// 각각 연산자가 사용가능하면, 연산자를 적용해서 result를 계산한 후에 dfs 재귀호출, 해당 연산자는 하나 감소
+		if( add > 0 ) dfs(result + num[cnt], cnt + 1, add - 1, sub, mul, div);
+		if( sub > 0 ) dfs(result - num[cnt], cnt + 1, add, sub - 1, mul, div);
+		if( mul > 0 ) dfs(result * num[cnt], cnt + 1, add, sub, mul - 1, div);
+		if( div > 0 ) dfs(result / num[cnt], cnt + 1, add, sub, mul, div - 1);
+	}
+}
+```
+
+
+### 결과 : ACK
+
+- 메모리 : 26,448 kb
+- 실행시간 : 123 ms
+
+> DFS를 사용하게 되면 마지막 연산을 위한 함수가 없어진다. 시간 복잡도 -> 기본적인 DFS O(N*V)
+
+
+version3
+DFS에서 사용되었던 변수를 static 변수로 변경
+```java
+package com.ssafy.problem3;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+
+public class SWEA_4008_숫자만들기_DFS_STATIC {
+	static int T, N, max, min;
+	static int[] num;
+
+	static int add, sub, mul, div;
+	public static void main(String[] args) throws IOException {
+		System.setIn(new FileInputStream("data3/4008.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		T = Integer.parseInt(br.readLine());
+
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine());
+			num = new int[N];
+
+			// 입력
+			StringTokenizer stk = new StringTokenizer(br.readLine());
+			add = Integer.parseInt(stk.nextToken());
+			sub = Integer.parseInt(stk.nextToken());
+			mul = Integer.parseInt(stk.nextToken());
+			div = Integer.parseInt(stk.nextToken());
+
+			// 숫자 배열
+			stk = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				num[i] = Integer.parseInt(stk.nextToken());
+			}
+
+			// 초기화
+			max = Integer.MIN_VALUE;
+			min = Integer.MAX_VALUE;
+
+			// dfs
+			dfs(num[0], 1);
+			System.out.println("#" + t + " " + (max - min));
+		}
+	}
+	// result : 이전 단계의 계산 결과, 현재 dfs 입장에서 보면 연산자 앞 수
+	// cnt : 기저조건을 확인하기 위한 재귀호출 count, 연산자 뒷 수에 대한 index
+	// add, sub, mul, div : 각 연산의 수정 가능 횟수 (현재 dfs에 주어진 연산자의 수), 사용하면 하나 줄여서 다음 단계로
+	private static void dfs(int result, int cnt) {
+		if(cnt == N) {
+			// result가 이미 계산된 결과
+			max = Math.max(max, result);
+			min = Math.min(min, result);
+			return;
+		}
+
+		// 각각 연산자가 사용가능하면, 연산자를 적용해서 result를 계산한 후에 dfs 재귀호출, 해당 연산자는 하나 감소
+		if( add > 0 ) {
+			add--;
+			dfs(result + num[cnt], cnt + 1);
+			add++;
+		}
+		if( sub > 0 ) {
+			sub--;
+			dfs(result - num[cnt], cnt + 1);
+			sub++;
+		}
+		if( mul > 0 ) {
+			mul--;
+			dfs(result * num[cnt], cnt + 1);
+			mul++;
+		}
+		if( div > 0 ) {
+			div--;
+			dfs(result / num[cnt], cnt + 1);
+			div++;
+		}
+	}
+}
+```
+
+### 결과 : ACK
+
+- 메모리 : 25,844 kb
+- 실행시간 : 112 ms
+
+> DFS를 사용하게 되면 마지막 연산을 위한 함수가 없어진다.
+추가적으로 파라미터를 static 변수로 변경했을 때,이 부분은 선택적이다. static이 어느 테케에서는 빠를 수 있지만 코드 구조상 파라미터가 구현하는데 간결하기 때문에 트레이드 오프가 필요함.
+시간 복잡도 -> 기본적인 DFS O(N*V)
