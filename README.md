@@ -54,12 +54,12 @@
 | 8회차(08/25 ~ 09/01) |            동전 2            | GOLD 5 | [링크](https://www.acmicpc.net/problem/2294)  |   ⭕   |   🔺   |   ⭕   |
 | 9회차(09/01 ~ 09/08) |            합분해            | GOLD 5 | [링크](https://www.acmicpc.net/problem/2225)  |  🔺   |  🔺   |  🔺   |
 | 9회차(09/01 ~ 09/08) |           톱니바퀴           | GOLD 5 | [링크](https://www.acmicpc.net/problem/14891) |  ⭕   |  ⭕   |  ⭕   |
-| 10회차(09/09 ~ 09/16) |            구슬탈출2            | GOLD 5 | [링크](https://www.acmicpc.net/problem/13460)  |  🔺   |  ⭕   |  ⭕   |
-| 10회차(09/09 ~ 09/16) |           2048(Easy)           | GOLD 5 | [링크](https://www.acmicpc.net/problem/12100) |  🔺   |  🔺   |  ⭕   |
-| 11회차(09/17 ~ 09/24) |            뱀            | GOLD 5 | [링크](https://www.acmicpc.net/problem/3190)  |  🔺   |  ⭕   |  ⭕   |
-| 11회차(09/17 ~ 09/24) |           시험 감독           | GOLD 5 | [링크](https://www.acmicpc.net/problem/13458) |  ⭕   |  🔺   |  ⭕   |
-| 12회차(09/25 ~ 10/01) |            테트로미노            | GOLD 5 | [링크](https://www.acmicpc.net/problem/14500)  |  ⭕   |  ⭕   |  ⭕   |
-| 12회차(09/25 ~ 10/01) |           퇴사           | GOLD 5 | [링크](https://www.acmicpc.net/problem/14501) |  ⭕   |  🔺   |  ⭕   |
+| 10회차(09/09 ~ 09/16) |            구슬탈출2            | GOLD 5 | [링크](https://www.acmicpc.net/problem/13460)  |  🔺   |  🔺   |  🔺   |
+| 10회차(09/09 ~ 09/16) |           2048(Easy)           | GOLD 5 | [링크](https://www.acmicpc.net/problem/12100) |  🔺   |  🔺   |  🔺  |
+| 11회차(09/17 ~ 09/24) |            뱀            | GOLD 5 | [링크](https://www.acmicpc.net/problem/3190)  |  🔺   |  🔺   |  🔺   |
+| 11회차(09/17 ~ 09/24) |           시험 감독           | GOLD 5 | [링크](https://www.acmicpc.net/problem/13458) |  🔺   |  🔺   |  🔺   |
+| 12회차(09/25 ~ 10/01) |            테트로미노            | GOLD 5 | [링크](https://www.acmicpc.net/problem/14500)  |  🔺   |  🔺   |  🔺   |
+| 12회차(09/25 ~ 10/01) |           퇴사           | GOLD 5 | [링크](https://www.acmicpc.net/problem/14501) |  🔺   |  🔺   |  🔺  |
 
 
 <br />
