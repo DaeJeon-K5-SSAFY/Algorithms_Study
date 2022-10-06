@@ -1,0 +1,247 @@
+## BOJ_3307_최장증가수열
+
+---
+
+<br />
+
+### 코드
+
+```java
+package com.ssafy.problem3;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class SWEA_12169_최장증가부분수열_부분집합 {
+	static int T, N, ans;
+	static int[] lis;
+	public static void main(String[] args) throws IOException {
+		System.setIn(new FileInputStream("data3/12169.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		T = Integer.parseInt(br.readLine());
+		
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine());
+			lis = new int[N];
+			
+			StringTokenizer stk = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				lis[i] = Integer.parseInt(stk.nextToken()); 
+			}
+			ans = 0;
+			lisSubset(0, lis, 0);
+			bw.write("#" + t + " " + ans + "\n");
+		}
+		bw.flush();
+	}
+	private static void lisSubset(int cnt, int[] lis, int flag) {
+//		if(ans > 0) return; // 부분집합이 선택된 개수가 많은 순서 -> 작은 순서로 동작하지 않기 때문에 오류 발생 
+		if(cnt == N) {
+			int len = 0; 
+			int pre = 0;
+			for (int i = 0; i < N; i++) {
+				if((flag & 1<<i) != 0) {
+					if(pre < lis[i]) {
+						len++;
+					} else {
+						return;
+					}
+					pre = lis[i];
+				}
+			}
+			ans = Math.max(ans, len);
+			return;
+		}
+		
+		lisSubset(cnt + 1, lis, flag | 1<<cnt);
+		lisSubset(cnt + 1, lis, flag);
+	}
+}
+
+```
+
+<br />
+
+
+### 결과 : 시간초과
+
+- 메모리 : KB
+- 실행시간 : ms
+- 코드길이 : B
+
+<br />
+
+### 풀이 방법
+문제는 N이 최대 1000을 요구하고 있다.
+
+부분집합의 시간 복잡도 O(2^n) -> n : 30이면 10억 번 연산 수행
+
+부분집합의 논리로 구하면 LCS를 구하기 매우 비효율적 -> 지수시간의 복잡도를 보이기 때문에 n=30 이상이면 값을 구하기 어렵다. 
+
+-> runtime error 
+
+> 부분집합으로 구하게 되면 runtime error 발생 
+> N이 최대 10000까지 진행되기 때문에 시간복잡도 O(2^N)이므로 동작하지 못한다. flag가 오버플로우 발생 (예상)
+
+<br />
+
+### 코드
+
+```java
+package com.ssafy.problem3;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class SWEA_12169_최장증가부분수열_DP {
+	static int T, N, ans;
+	static int[] lis;
+	static int[] dp;
+	public static void main(String[] args) throws IOException {
+		System.setIn(new FileInputStream("data3/12169.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		T = Integer.parseInt(br.readLine());
+		
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine());
+			lis = new int[N];
+			dp = new int[N];
+			
+			StringTokenizer stk = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				lis[i] = Integer.parseInt(stk.nextToken()); 
+			}
+			ans = 0;
+			lisDP(lis, dp);
+			bw.write("#" + t + " " + ans + "\n");
+		}
+		bw.flush();
+	}
+	private static void lisDP(int[] lis2, int[] dp2) {
+		for (int i = 0; i < N; i++) {
+			dp[i] = 1; 
+			for (int j = 0; j < i; j++) {
+				if(lis[i] > lis[j] && dp[i] < dp[j] + 1) {
+					dp[i] = dp[j] + 1;
+				}
+			}
+			ans = Math.max(ans, dp[i]);
+		}
+	}
+}
+
+
+```
+
+<br />
+
+
+### ACK
+
+메모리 : 63,632 kb
+시간 : 4,676 ms
+
+<br />
+
+### 풀이 방법
+> 기준 i 원소 밑으로 j가 동작할 때, 
+> j 원소가 i 원소보다 작고 LIS[i] 는 j의 최적해보다 작으면 최적해 + 1을 해서 붙여준다.
+> 시간 복잡도는 O(N^2)로 1 -> N-1 진행하면서 더해주는 등차수열과 동일
+
+
+<br />
+
+### 코드
+
+```java
+package com.ssafy.problem3;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class SWEA_12169_최장증가부분수열_BinaryTree {
+	static int T, N, ans;
+	static int[] lis;
+	static int[] C;
+	public static void main(String[] args) throws IOException {
+		System.setIn(new FileInputStream("data3/12169.txt"));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		T = Integer.parseInt(br.readLine());
+		
+		for (int t = 1; t <= T; t++) {
+			N = Integer.parseInt(br.readLine());
+			lis = new int[N];
+			C = new int[N];
+			
+			StringTokenizer stk = new StringTokenizer(br.readLine());
+			for (int i = 0; i < N; i++) {
+				lis[i] = Integer.parseInt(stk.nextToken()); 
+			}
+			ans = lisBinaryTree(lis, C);
+			bw.write("#" + t + " " + ans + "\n");
+		}
+		bw.flush();
+	}
+	private static int lisBinaryTree(int[] arr, int[] C) {
+		int size = 0;
+		for (int i = 0; i < N; i++) {
+			int pos = Arrays.binarySearch(C, 0, size, arr[i]);
+			if(pos >= 0) continue;
+			int insPos = Math.abs(pos) - 1; 
+			C[insPos] = arr[i];
+			
+			if(insPos == size) size++;
+		}
+		return size;
+	}
+}
+```
+
+<br />
+
+
+### ACK
+
+메모리 : 58,300 kb
+시간 : 204 ms
+
+<br />
+
+### 풀이 방법
+이진탐색 (인덱스트리로도 구할 수 있음 -> 복잡함)
+
+시간복잡도는 O(nlogn)
+
+*logn에 대한 시간복잡도를 이해하기 위한 [Link](https://velog.io/@nninnnin7/logN%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%ED%8E%8C)
+
+예를 들어, 탐색 원소가 8개일 때 이진탐색을 사용하면 log_2(8) = 3번만에 찾는다는 의미
+
+
+
+!!! note
+    arr -> N 번 동안 binarySearch 탐색을 logN 하기 때문에 
+    시간 복잡도가 O(nlogn)으로 표현되게 된다.
+
+    결국 원소 배열에서 LIS에 대한 C 배열을 따로 만들어서 특별한 정렬를 만들어 낸 것이라고 생각
+
+    -> 길이만 알아낼 수 있다. 최장 길이의 문자열을 알아내려면 DP를 사용해야 한다.
+
