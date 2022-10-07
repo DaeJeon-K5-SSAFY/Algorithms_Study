@@ -147,4 +147,6 @@ T : 최대 100
 	그리고 int[] arr를 하는 부분에서 stream, filter 등 많은 처리를 하기 때문에 메모리와 시간을 비효율적으로 낭비한다
 	그러므로 찾아보니 StringTokenizer(br.readLine(), "[],") 바로 구별자에 따라서 나눠주니 빠르고 혹은 subString(1, t.length-1).split(",")으로 앞 뒤 괄호를 지우고 쉼표를 구분자로 나눌 수도 있다
 
+	
+
 ---
